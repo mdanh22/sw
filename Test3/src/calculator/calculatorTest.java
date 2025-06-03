@@ -15,7 +15,7 @@ class calculatorTest {
 
 	@Test
 	void testAddIntInt() {
-		assertEquals(10,calc.add(4,6));
+		assertEquals(10,calc.add(5,5));
 	}
 
 	@Test
