@@ -20,7 +20,7 @@ class calculatorTest {
 
 	@Test
 	void testAddStringString() {
-		assertEquals("apple",calc.add("app", "le"));
+		assertEquals("carrot",calc.add("car", "rot"));
 	}
 
 }
