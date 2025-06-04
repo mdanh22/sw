@@ -70,15 +70,9 @@ pipeline {
         success {
             echo "Build and test succeeded!"
             emailext(
-      to: 'danee1119@naver.com',
-      from: 'danee1119@naver.com',
-      subject: "✅ Jenkins Build 성공: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-      body: """\
-🎉 빌드 성공!
-
-- 프로젝트: ${env.JOB_NAME}
-- 결과 보기: ${env.BUILD_URL}
-"""
+      to: 'yourid@gmail.com',
+      subject: "🎉 Jenkins 빌드 성공",
+      body: "✅ ${env.JOB_NAME} 빌드가 성공했습니다! 확인: ${env.BUILD_URL}"
     )
 
         }
