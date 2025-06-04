@@ -69,18 +69,18 @@ pipeline {
 
         success {
             echo "Build and test succeeded!"
-
             emailext(
-            subject: "✅ Jenkins Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-            body: """\
-Build 성공 
+      to: 'danee1119@naver.com',
+      from: 'danee1119@naver.com',
+      subject: "✅ Jenkins Build 성공: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+      body: """\
+🎉 빌드 성공!
 
 - 프로젝트: ${env.JOB_NAME}
-- 빌드 번호: ${env.BUILD_NUMBER}
 - 결과 보기: ${env.BUILD_URL}
-""",
-            to: 'danee1119@naver.com'  // ← 여기에 본인 이메일 정확히 입력
-        )
+"""
+    )
+
         }
     }
 }
